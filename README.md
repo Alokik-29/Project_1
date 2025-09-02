@@ -33,9 +33,13 @@ Neutral, Calm, Happy, Sad, Angry, Fearful, Disgust, Surprised
 🧠 Model Training
 
 Framework: PyTorch
+
 Optimizer: AdamW
+
 Loss: CrossEntropy
+
 Epochs: Early stopping at ~20 epochs
+
 Hardware: Google Colab (GPU T4)
 
 
@@ -45,6 +49,7 @@ Hardware: Google Colab (GPU T4)
 Dataset	Accuracy (%)
 
 RAVDESS (Train/Test)	  84%
+
 CREMA-D (Cross-dataset)	  54%
 
 Loss/accuracy curves and confusion matrix are included in the report.
