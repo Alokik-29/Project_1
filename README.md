@@ -39,8 +39,8 @@ Hardware: Google Colab (GPU T4)
 
 📊 Results
 Dataset	Accuracy (%)
-RAVDESS (Train/Test)	XX %
-CREMA-D (Cross-dataset)	XX %
+RAVDESS (Train/Test)	84%
+CREMA-D (Cross-dataset)	54%
 
 (Fill these with your final numbers from training)
 
