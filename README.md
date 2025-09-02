@@ -2,11 +2,13 @@
 
 
 📌 Project Overview
+
 This project focuses on classifying human emotions from speech audio using deep learning.
 We fine-tuned a pretrained Audio Spectrogram Transformer (AST) model on the RAVDESS dataset and validated performance on the CREMA-D dataset to check cross-dataset generalization.
 
 
 🚀 Key Features
+
 Preprocessing: Audio converted to spectrograms (using Librosa & Torchaudio).
 
 Model: Pretrained AST (Audio Spectrogram Transformer) fine-tuned with transfer learning.
@@ -29,6 +31,7 @@ Neutral, Calm, Happy, Sad, Angry, Fearful, Disgust, Surprised
 
 
 🧠 Model Training
+
 Framework: PyTorch
 Optimizer: AdamW
 Loss: CrossEntropy
@@ -37,9 +40,13 @@ Hardware: Google Colab (GPU T4)
 
 
 📊 Results
+
+
 Dataset	Accuracy (%)
-RAVDESS (Train/Test)	84%
-CREMA-D (Cross-dataset)	54%
+
+RAVDESS (Train/Test)	  84%
+CREMA-D (Cross-dataset)	  54%
+
 Loss/accuracy curves and confusion matrix are included in the report.
 
 
