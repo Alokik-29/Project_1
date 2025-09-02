@@ -4,6 +4,7 @@
 📌 Project Overview
 
 This project focuses on classifying human emotions from speech audio using deep learning.
+
 We fine-tuned a pretrained Audio Spectrogram Transformer (AST) model on the RAVDESS dataset and validated performance on the CREMA-D dataset to check cross-dataset generalization.
 
 
@@ -58,7 +59,9 @@ Loss/accuracy curves and confusion matrix are included in the report.
 📌 Insights
 
 The AST model learns emotions well on RAVDESS.
+
 Accuracy drops significantly on CREMA-D, showing dataset bias and lack of generalization.
+
 Future improvements: data augmentation, domain adaptation, larger multi-dataset training.
 
 
@@ -69,14 +72,19 @@ Python, PyTorch, Torchaudio, Librosa, NumPy, Matplotlib
 Google Colab
 
 📜 How to Run
+
+
 # Install dependencies
+
 pip install torch torchaudio librosa matplotlib
 
 # Clone repo
+
 git clone https://github.com/your-username/speech-emotion-ast.git
 cd speech-emotion-ast
 
 # Run training
+
 python train.py
 
 
