@@ -1,97 +1,63 @@
 🎵 Speech Emotion Recognition with Audio Spectrogram Transformer (AST)
 
-
 📌 Project Overview
-
-This project focuses on classifying human emotions from speech audio using deep learning.
-
-We fine-tuned a pretrained Audio Spectrogram Transformer (AST) model on the RAVDESS dataset and validated performance on the CREMA-D dataset to check cross-dataset generalization.
-
+This project classifies human emotions from speech audio using deep learning.
+We fine-tuned a pretrained Audio Spectrogram Transformer (AST) model on the RAVDESS dataset and validated performance on CREMA-D for cross-dataset generalization.
 
 🚀 Key Features
+Preprocessing: Audio converted to spectrograms (Librosa & Torchaudio)
+Model: Pretrained AST fine-tuned with transfer learning
+Regularization: Early stopping, learning rate scheduler, dropout
+Evaluation: Cross-dataset validation on CREMA-D
+Visualization: Training/validation curves + confusion matrix
 
-Preprocessing: Audio converted to spectrograms (using Librosa & Torchaudio).
+📂 Datasets
+RAVDESS 🎭 – Training dataset (~1,400 speech samples, 8 emotions)
+CREMA-D 🎤 – Testing for cross-dataset generalization
 
-Model: Pretrained AST (Audio Spectrogram Transformer) fine-tuned with transfer learning.
-
-Regularization: Early stopping, learning rate scheduler.
-
-Evaluation: Cross-dataset validation on CREMA-D.
-
-Visualization: Training/validation curves + confusion matrix.
-
-
-📂 Dataset
-
-RAVDESS 🎭 – Training dataset (~1,400 speech samples, 8 emotions).
-
-CREMA-D 🎤 – Used for testing cross-dataset generalization.
-
-Emotion classes:
-Neutral, Calm, Happy, Sad, Angry, Fearful, Disgust, Surprised
-
+Emotion classes: Neutral, Calm, Happy, Sad, Angry, Fearful, Disgust, Surprised
 
 🧠 Model Training
-
 Framework: PyTorch
-
 Optimizer: AdamW
-
 Loss: CrossEntropy
-
 Epochs: Early stopping at ~20 epochs
-
 Hardware: Google Colab (GPU T4)
 
-
 📊 Results
-
-
 Dataset	Accuracy (%)
+RAVDESS (Train/Test)	91%
+CREMA-D (Cross-dataset)	58%
 
-RAVDESS (Train/Test)	  84%
-
-CREMA-D (Cross-dataset)	  54%
-
-Loss/accuracy curves and confusion matrix are included in the report.
-
+Loss/accuracy curves and confusion matrix are included in the project report.
 
 📌 Insights
+AST performs well on RAVDESS but shows dataset bias on CREMA-D
+Future improvements: data augmentation, domain adaptation, multi-dataset training
 
-The AST model learns emotions well on RAVDESS.
+🌐 Live Demo
 
-Accuracy drops significantly on CREMA-D, showing dataset bias and lack of generalization.
-
-Future improvements: data augmentation, domain adaptation, larger multi-dataset training.
-
+Try the project live here:
+[Hugging Face Space – Audio Emotion Recognition](https://huggingface.co/spaces/alokik29/audio-emotion-gradio)
 
 🛠️ Tech Stack
+Python, PyTorch, Torchaudio, Librosa, NumPy, Matplotlib, Google Colab
 
-Python, PyTorch, Torchaudio, Librosa, NumPy, Matplotlib
-
-Google Colab
-
-📜 How to Run
-
-
+📜 How to Run Locally
 # Install dependencies
-
-pip install torch torchaudio librosa matplotlib
+pip install torch torchaudio librosa matplotlib gradio
 
 # Clone repo
+git clone https://github.com/Alokik-29/Project_1.git
+cd Project_1
 
-git clone https://github.com/your-username/speech-emotion-ast.git
-cd speech-emotion-ast
-
-# Run training
-
-python train.py
-
+# Run Gradio demo
+python app.py
 
 🎯 Future Work
 
-Deploy demo using Gradio / Streamlit.
+Deploy demo with Gradio / Streamlit (done ✅)
 
-Train on multiple datasets for better generalization.
+Train on multiple datasets for better generalization
 
-Explore self-supervised audio models like Wav2Vec2.0.
+Explore self-supervised audio models like Wav2Vec2.0
