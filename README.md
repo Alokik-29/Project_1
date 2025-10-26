@@ -71,18 +71,6 @@ Try the project live here:
 
 Python, PyTorch, Torchaudio, Librosa, NumPy, Matplotlib, Google Colab
 
-📜 How to Run Locally
-
-
-# Install dependencies
-pip install torch torchaudio librosa matplotlib gradio
-
-# Clone repo
-git clone https://github.com/Alokik-29/Project_1.git
-cd Project_1
-
-# Run Gradio demo
-python app.py
 
 🎯 Future Work
 
