@@ -54,7 +54,7 @@ predictor = ImprovedEmotionPredictor("best_improved_model.pth", feature_extracto
 # Gradio interface
 demo = gr.Interface(
     fn=predictor.predict_emotion,
-    inputs=gr.Audio(source="upload", type="filepath"),
+    inputs=gr.Audio(type="filepath"),
     outputs="text",
     title="🎤 AST Audio Emotion Recognition",
     description="Upload a .wav audio clip and detect the emotion from tone of voice."
