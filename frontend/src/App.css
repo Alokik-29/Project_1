@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #d8dadf;
+  background-image: radial-gradient(circle at 50% 0%, #e4e6ea 0%, #c9cbd1 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Space Grotesk', system-ui, sans-serif;
+}
+
+.unit {
+  width: 380px;
+  background: #26282e;
+  border-radius: 18px;
+  padding: 22px;
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.06) inset,
+    0 30px 60px -20px rgba(0, 0, 0, 0.45),
+    0 2px 4px rgba(0, 0, 0, 0.3);
+  border: 1px solid #14151a;
+}
+
+.unit-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 2px 4px 16px;
+  border-bottom: 1px solid #3a3d45;
+  margin-bottom: 16px;
+}
+
+.unit-name {
+  color: #eef0f3;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 0.08em;
+}
+
+.unit-model {
+  color: #6d7180;
+  font-size: 11px;
+  letter-spacing: 0.02em;
+}
+
+.screen {
+  background: #14161a;
+  border-radius: 10px;
+  padding: 24px 18px;
+  height: 132px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border: 1px solid #0a0b0d;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5) inset;
+  overflow: hidden;
+}
+
+.bars {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  height: 44px;
+}
+
+.bar {
+  width: 4px;
+  min-height: 4px;
+  background: #2dd4bf;
+  border-radius: 2px;
+  transition: height 0.08s ease-out;
+  box-shadow: 0 0 6px rgba(45, 212, 191, 0.5);
+}
+
+.screen-caption {
+  margin-top: 14px;
+  color: #4b4f5a;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.screen-message {
+  color: #7c8091;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  text-align: center;
+}
+
+.screen-message.error {
+  color: #f27979;
+}
+
+.readout {
+  width: 100%;
+}
+
+.readout-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 8px;
+}
+
+.readout-label {
+  color: #5b5f6b;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.readout-value {
+  color: #2dd4bf;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  text-transform: capitalize;
+  text-shadow: 0 0 12px rgba(45, 212, 191, 0.35);
+}
+
+.readout-value.small {
+  font-size: 13px;
+  font-family: 'JetBrains Mono', monospace;
+  color: #c7c9d1;
+  text-shadow: none;
+}
+
+.meter {
+  width: 100%;
+  height: 6px;
+  background: #0a0b0d;
+  border-radius: 3px;
+  overflow: hidden;
+  margin: 10px 0;
+}
+
+.meter-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #14b8a6, #2dd4bf);
+  transition: width 0.4s ease-out;
+}
+
+.controls {
+  display: flex;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 0;
+  border-radius: 8px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: transform 0.06s ease, filter 0.15s ease;
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+.btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.btn.primary {
+  background: #2dd4bf;
+  color: #0c1210;
+}
+
+.btn.primary:hover:not(:disabled) {
+  filter: brightness(1.08);
+}
+
+.btn.stop {
+  background: #e35d5d;
+  color: #1a0d0d;
+}
+
+.btn.ghost {
+  background: transparent;
+  color: #c7c9d1;
+  border-color: #3a3d45;
+}
+
+.btn.ghost:hover {
+  border-color: #5b5f6b;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #0c1210;
+}
+
+.square {
+  width: 8px;
+  height: 8px;
+  background: #1a0d0d;
+}
+
+.unit-footer {
+  text-align: center;
+  margin-top: 16px;
+  color: #4b4f5a;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bar, .meter-fill, .btn {
+    transition: none;
+  }
+}
