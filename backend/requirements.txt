@@ -1,8 +1,0 @@
-fastapi
-uvicorn[standard]
-python-multipart
-torch
-transformers==4.44.2
-librosa
-joblib
-numpy
